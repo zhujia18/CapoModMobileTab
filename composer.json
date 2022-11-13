@@ -1,0 +1,36 @@
+{
+    "name": "capomod/mobile-tab",
+    "description": "CapoMod Custom Mobile Tab",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2.0",
+        "acpl/mobile-tab": "^1.1.1"
+    },
+    "authors": [
+        {
+            "name": "Jasper",
+            "email": "443493410@qq.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CapoMod\\MobileTab\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "CapoMod-Mobile-Tab",
+            "category": "",
+            "icon": {
+                "name": "fas fa-signal",
+                "color": "#e74c3c",
+                "backgroundColor": "#fff"
+            }
+        }
+    }
+}
