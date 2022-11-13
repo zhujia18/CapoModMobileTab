@@ -2,31 +2,59 @@
 /******/ 	// runtime can't be in strict mode because a global variable is assign and maybe created.
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/forum/index.ts":
+/***/ "./src/admin/index.ts":
 /*!****************************!*\
-  !*** ./src/forum/index.ts ***!
+  !*** ./src/admin/index.ts ***!
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var flarum_forum_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/forum/app */ "flarum/forum/app");
-/* harmony import */ var flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_app__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var flarum_admin_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/admin/app */ "flarum/admin/app");
+/* harmony import */ var flarum_admin_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_app__WEBPACK_IMPORTED_MODULE_0__);
 
-flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('capomod/mobile-tab', function () {
-  console.log('[capomod/mobile-tab] Hello, forum!');
+flarum_admin_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('capomod/mobile-tab', function () {
+  console.log('[capomod/mobile-tab] Hello, admin!');
 });
 
 /***/ }),
 
-/***/ "flarum/forum/app":
+/***/ "./src/common/index.ts":
+/*!*****************************!*\
+  !*** ./src/common/index.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/common/app */ "flarum/common/app");
+/* harmony import */ var flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_common_app__WEBPACK_IMPORTED_MODULE_0__);
+
+flarum_common_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('capomod/mobile-tab', function () {
+  console.log('[capomod/mobile-tab] Hello, forum and admin!');
+});
+
+/***/ }),
+
+/***/ "flarum/admin/app":
 /*!**************************************************!*\
-  !*** external "flarum.core.compat['forum/app']" ***!
+  !*** external "flarum.core.compat['admin/app']" ***!
   \**************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = flarum.core.compat['forum/app'];
+module.exports = flarum.core.compat['admin/app'];
+
+/***/ }),
+
+/***/ "flarum/common/app":
+/*!***************************************************!*\
+  !*** external "flarum.core.compat['common/app']" ***!
+  \***************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = flarum.core.compat['common/app'];
 
 /***/ })
 
@@ -103,14 +131,16 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 /*!******************!*\
-  !*** ./forum.js ***!
+  !*** ./admin.ts ***!
   \******************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_forum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/forum */ "./src/forum/index.ts");
+/* harmony import */ var _src_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/common */ "./src/common/index.ts");
+/* harmony import */ var _src_admin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/admin */ "./src/admin/index.ts");
+
 
 })();
 
 module.exports = __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=forum.js.map
+//# sourceMappingURL=admin.js.map
