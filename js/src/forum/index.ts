@@ -1,5 +1,11 @@
-import app from 'flarum/forum/app';
+import { components } from '@acpl-mobile-tab';
+import { extend } from 'flarum/common/extend';
 
-app.initializers.add('capomod/mobile-tab', () => {
-  console.log('[capomod/mobile-tab] Hello, forum!');
-});
+const { MobileTab, MobileTabItem } = components;
+
+export default () => {
+  extend(MobileTab.prototype, 'items', (items) => {
+    // Remove item
+    items.remove('home');
+  });
+};

@@ -10,23 +10,45 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var flarum_forum_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/forum/app */ "flarum/forum/app");
-/* harmony import */ var flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_app__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _acpl_mobile_tab__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @acpl-mobile-tab */ "@acpl-mobile-tab");
+/* harmony import */ var _acpl_mobile_tab__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_acpl_mobile_tab__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/common/extend */ "flarum/common/extend");
+/* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__);
 
-flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default().initializers.add('capomod/mobile-tab', function () {
-  console.log('[capomod/mobile-tab] Hello, forum!');
+
+var MobileTab = _acpl_mobile_tab__WEBPACK_IMPORTED_MODULE_0__.components.MobileTab,
+  MobileTabItem = _acpl_mobile_tab__WEBPACK_IMPORTED_MODULE_0__.components.MobileTabItem;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  (0,flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__.extend)(MobileTab.prototype, 'items', function (items) {
+    // Remove item
+    items.remove('home');
+  });
 });
 
 /***/ }),
 
-/***/ "flarum/forum/app":
-/*!**************************************************!*\
-  !*** external "flarum.core.compat['forum/app']" ***!
-  \**************************************************/
+/***/ "@acpl-mobile-tab":
+/*!*******************************************************!*\
+  !*** external "flarum.extensions['acpl-mobile-tab']" ***!
+  \*******************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = flarum.core.compat['forum/app'];
+module.exports = flarum.extensions['acpl-mobile-tab'];
+
+/***/ }),
+
+/***/ "flarum/common/extend":
+/*!******************************************************!*\
+  !*** external "flarum.core.compat['common/extend']" ***!
+  \******************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = flarum.core.compat['common/extend'];
 
 /***/ })
 
