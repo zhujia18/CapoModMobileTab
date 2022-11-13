@@ -24,7 +24,7 @@
     "extra": {
         "flarum-extension": {
             "title": "CapoMod-Mobile-Tab",
-            "category": "",
+            "category": "theme",
             "icon": {
                 "name": "fas fa-signal",
                 "color": "#e74c3c",

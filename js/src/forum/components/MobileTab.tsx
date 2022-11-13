@@ -23,7 +23,9 @@ export default class MobileTab extends Component {
   items(): ItemList<Children> {
     const items = new ItemList<Children>();
 
-    items.add('Mod', <MobileTabItem route="/" icon="fas fa-home" label={app.translator.trans('acpl-mobile-tab.forum.home')} />, 100);
+    items.add('home', <MobileTabItem route="/" icon="fas fa-home" label={app.translator.trans('acpl-mobile-tab.forum.home')} />, 100);
+
+    items.add('capomsg', <MobileTabItem route="http://capomod.com/t/CapoMsg" icon="fa-solid fa-seedling" label={app.translator.trans('acpl-mobile-tab.forum.capomsg')} />, 100);
 
     if ('flarum-tags' in flarum.extensions) {
       items.add(
