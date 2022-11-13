@@ -25,7 +25,7 @@ export default class MobileTab extends Component {
 
     items.add('home', <MobileTabItem route="/" icon="fas fa-home" label={app.translator.trans('acpl-mobile-tab.forum.home')} />, 100);
 
-    items.add('capomsg', <MobileTabItem route="http://capomod.com/t/CapoMsg" icon="fa-light fa-bullhorn" label={app.translator.trans('acpl-mobile-tab.forum.capomsg')} />, 100);
+    items.add('capomsg', <MobileTabItem route="http://capomod.com/t/CapoMsg" icon="fa-solid fa-bullhorn" label={app.translator.trans('acpl-mobile-tab.forum.capomsg')} />, 100);
 
     if ('flarum-tags' in flarum.extensions) {
       items.add(
