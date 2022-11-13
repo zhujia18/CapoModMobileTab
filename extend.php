@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace CapoMod\\MobileTab;
+namespace CapoMod\MobileTab;
 
 use Flarum\Extend;
 
