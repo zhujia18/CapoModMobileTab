@@ -25,33 +25,11 @@ export default class MobileTab extends Component {
 
     items.add('home', <MobileTabItem route="/" icon="fas fa-home" label={app.translator.trans('capomod-mobile-tab.forum.home')} />, 100);
 
+    items.add('discuss', <MobileTabItem route="/" icon="fas fa-tags" label={app.translator.trans('capomod-mobile-tab.forum.discuss')} />, 100);
+
     items.add('capomsg', <MobileTabItem route="http://capomod.com/t/CapoMsg" icon="fa-solid fa-virus" label={app.translator.trans('capomod-mobile-tab.forum.capomsg')} />, 100);
 
-    if ('flarum-tags' in flarum.extensions) {
-      items.add(
-        'tags',
-        <MobileTabItem route={app.route('tags')} icon="fas fa-tags" label={app.translator.trans('flarum-tags.forum.index.tags_link')} />,
-        90
-      );
-    }
-
     if (app.session.user) {
-      const unread = app.session.user.unreadNotificationCount();
-      // The default Flarum component opens as a dropdown on mobile if the drawer is not open
-      items.add(
-        'notifications',
-        <LinkButton
-          href={app.route('notifications')}
-          icon="fas fa-bell"
-          title={app.translator.trans('core.forum.notifications.title')}
-          className="Dropdown NotificationsDropdown"
-        >
-          {unread ? <span className="NotificationsDropdown-unread">{unread}</span> : ''}
-          {app.translator.trans('core.forum.notifications.title')}
-        </LinkButton>,
-        80
-      );
-
       items.add('session', <MobileTabSessionDropdown />, 70);
     } else {
       items.add(
@@ -62,7 +40,6 @@ export default class MobileTab extends Component {
         70
       );
     }
-
     return items;
   }
 }
