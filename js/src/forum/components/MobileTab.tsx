@@ -23,11 +23,11 @@ export default class MobileTab extends Component {
   items(): ItemList<Children> {
     const items = new ItemList<Children>();
 
-    items.add('home', <MobileTabItem route="http://capomod.com" icon="fas fa-home" label={app.translator.trans('capomod-mobile-tab.forum.home')} />, 100);
+    items.add('home', <MobileTabItem route="/" icon="fas fa-home" label={app.translator.trans('capomod-mobile-tab.forum.home')} />, 100);
 
-    items.add('discuss', <MobileTabItem route="http://capomod.com/all" icon="fas fa-tags" label={app.translator.trans('capomod-mobile-tab.forum.discuss')} />, 100);
+    items.add('discuss', <MobileTabItem route="/all" icon="fas fa-tags" label={app.translator.trans('capomod-mobile-tab.forum.discuss')} />, 100);
 
-    items.add('capomsg', <MobileTabItem route="http://capomod.com/t/CapoMsg" icon="fa-solid fa-virus" label={app.translator.trans('capomod-mobile-tab.forum.capomsg')} />, 100);
+    items.add('capomsg', <MobileTabItem route="/t/CapoMsg" icon="fa-solid fa-virus" label={app.translator.trans('capomod-mobile-tab.forum.capomsg')} />, 100);
 
     if (app.session.user) {
       items.add('session', <MobileTabSessionDropdown />, 70);
