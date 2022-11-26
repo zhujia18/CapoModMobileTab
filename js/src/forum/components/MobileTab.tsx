@@ -23,9 +23,9 @@ export default class MobileTab extends Component {
   items(): ItemList<Children> {
     const items = new ItemList<Children>();
 
-    items.add('home', <MobileTabItem route="/blog/category/recommend" icon="fas fa-home" label={app.translator.trans('capomod-mobile-tab.forum.home')} />, 100);
+    items.add('home', <MobileTabItem route="/blog" icon="fas fa-home" label={app.translator.trans('capomod-mobile-tab.forum.home')} />, 100);
 
-    items.add('discuss', <MobileTabItem route="/all" icon="fas fa-tags" label={app.translator.trans('capomod-mobile-tab.forum.discuss')} />, 100);
+    items.add('discuss', <MobileTabItem route="/all" icon="fa-brands fa-discourse" label={app.translator.trans('capomod-mobile-tab.forum.discuss')} />, 100);
 
     items.add('information', <MobileTabItem route="/blog/category/information" icon="fa-solid fa-virus" label={app.translator.trans('capomod-mobile-tab.forum.information')} />, 100);
 
