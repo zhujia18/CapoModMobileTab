@@ -25,9 +25,9 @@ export default class MobileTab extends Component {
 
     items.add('home', <MobileTabItem route="/" icon="fas fa-home" label={app.translator.trans('capomod-mobile-tab.forum.home')} />, 100);
 
-    items.add('discuss', <MobileTabItem route="/all" icon="fa-brands fa-discourse" label={app.translator.trans('capomod-mobile-tab.forum.discuss')} />, 100);
+    items.add('discuss', <MobileTabItem route="/all" icon="fa-solid fa-comment" label={app.translator.trans('capomod-mobile-tab.forum.discuss')} />, 100);
 
-    items.add('information', <MobileTabItem route="/blog/category/information" icon="fa-solid fa-virus" label={app.translator.trans('capomod-mobile-tab.forum.information')} />, 100);
+    items.add('information', <MobileTabItem route="/blog/category/information" icon="fa-solid fa-bell" label={app.translator.trans('capomod-mobile-tab.forum.information')} />, 100);
 
     if (app.session.user) {
       items.add('session', <MobileTabSessionDropdown />, 70);
